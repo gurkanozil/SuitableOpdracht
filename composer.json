@@ -1,0 +1,19 @@
+{
+    "name": "gurkanozil/suitable-opdracht",
+    "description": "Suitable opdracht om mijn kennis te testen",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Gurkanozil\\SuitableOpdracht\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gurkanozil"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^11.42"
+    }
+}
