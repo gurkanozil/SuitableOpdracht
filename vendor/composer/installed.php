@@ -1,13 +1,13 @@
 <?php return array(
     'root' => array(
         'name' => 'gurkanozil/suitable-opdracht',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '8386fa4d2d93ef1131d1295749f2cc14a760f261',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'dev' => true,
+        'dev' => false,
     ),
     'versions' => array(
         'brick/math' => array(
@@ -38,9 +38,9 @@
             'dev_requirement' => false,
         ),
         'gurkanozil/suitable-opdracht' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '8386fa4d2d93ef1131d1295749f2cc14a760f261',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

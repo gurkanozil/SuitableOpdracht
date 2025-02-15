@@ -1543,6 +1543,6 @@
             "install-path": "../voku/portable-ascii"
         }
     ],
-    "dev": true,
+    "dev": false,
     "dev-package-names": []
 }
