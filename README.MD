@@ -3,6 +3,16 @@
 ## Beschrijving
 Dit project is een webapplicatie die dient als een platform voor gebruikers om berichten achter te laten in een gastenboek en om contact op te nemen via een contactformulier. Het is ontwikkeld met PHP en maakt gebruik van een MySQL-database.
 
+Hieronder de gegeven opdracht:
+Maak 2 functionerende pagina's met PHP en bootstrap 3;
+
+- 'Over ons' met Contactformulier-pagina
+
+- Gastenboek-pagina met mysql
+
+- Het menu komt uit een JSON bestand
+
+
 [![PHP Composer](https://github.com/gurkanozil/SuitableOpdracht/actions/workflows/php.yml/badge.svg)](https://github.com/gurkanozil/SuitableOpdracht/actions/workflows/php.yml)
 
 ## Vereisten

@@ -18,8 +18,16 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] === "POST") 
     $name = $_POST['name'];
     $message = $_POST['message'];
 
-    $sql = "INSERT INTO gastenboek (name, message) VALUES ('$name', '$message')";
-    $conn->query($sql);
+    // Debugging: Log the values being inserted
+    error_log("Inserting: Name: $name, Message: $message");
+
+    // Gebruik een prepared statement voor de invoeging
+    $stmt = $conn->prepare("INSERT INTO gastenboek (name, message) VALUES (?, ?)");
+    if ($stmt->execute([$name, $message])) {
+        // Insertion successful
+    } else {
+        echo "Er is een fout opgetreden bij het verzenden van uw bericht: " . implode(", ", $stmt->errorInfo());
+    }
 }
 
 $result = $conn->query("SELECT * FROM gastenboek");

@@ -21,12 +21,12 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'] ?? '';
     $message = $_POST['message'] ?? '';
 
-    // Gegevens invoegen in de database
+    // Gegevens invoegen in de database met prepared statement
     $stmt = $pdo->prepare("INSERT INTO contact_form (name, email, message) VALUES (?, ?, ?)");
     if ($stmt->execute([$name, $email, $message])) {
         echo "Bericht succesvol verzonden!";
     } else {
-        echo "Er is een fout opgetreden bij het verzenden van uw bericht.";
+        echo "Er is een fout opgetreden bij het verzenden van uw bericht: " . implode(", ", $stmt->errorInfo());
     }
 }
 
