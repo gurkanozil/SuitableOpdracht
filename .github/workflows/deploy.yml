@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       COMPOSER_NO_DEV: 1
+      DB_USERNAME: root
+      DB_PASSWORD: 
+      DB_NAME: suitableOpdracht
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -19,10 +22,10 @@ jobs:
       uses: ramsey/composer-install@v3
     - name: Run Migrations
       run: |
-        php artisan migrate --force
+        mysql -u ${{ secrets.DB_USERNAME }} -p${{ secrets.DB_PASSWORD }} ${{ secrets.DB_NAME }} < path/to/migration.sql
     - name: Seed Database
       run: |
-        php artisan db:seed --force
+        mysql -u ${{ secrets.DB_USERNAME }} -p${{ secrets.DB_PASSWORD }} ${{ secrets.DB_NAME }} < path/to/seeder.sql
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
