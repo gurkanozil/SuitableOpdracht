@@ -1,0 +1,16 @@
+{
+    "menu": [
+        {
+            "title": "Home",
+            "link": "index.php"
+        },
+        {
+            "title": "Over ons",
+            "link": "over_ons.php"
+        },
+        {
+            "title": "Gastenboek",
+            "link": "gastenboek.php"
+        }
+    ]
+}
